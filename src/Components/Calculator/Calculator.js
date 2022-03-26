@@ -7,12 +7,16 @@ const Calculator = () => {
   const [secondArg, setSecondArg] = useState(0);
   const [operation, setOperation] = useState("");
   const [total, setTotal] = useState("");
+  const [containsDecimal, setContainsDecimal] = useState(false);
+  const [cButton, setCButton] = useState(false);
+  const [operationButton, setOperationButton] = useState();
 
   ////////////////////// Operation Functions ////////////////////////////
 
   // Add numbers to the screen upon click
   const addToFunction = (e) => {
     setValue(value + e.target.innerHTML);
+    setCButton(true);
   };
 
   // CLEAR screen using the "AC Button"
@@ -22,31 +26,116 @@ const Calculator = () => {
     setSecondArg(0);
     setTotal(0);
     setOperation("");
+    setContainsDecimal(false);
+    setCButton(false);
+  };
+
+  // +/- Button Function
+  const plusMinus = () => {
+    if (value.includes("-")) {
+      let newValue = value.split("").slice(1).join("").toString();
+      setValue(newValue);
+    } else if (value !== "-") {
+      if (value === "") {
+        setValue(value + "-");
+      } else {
+        setValue("-" + value);
+      }
+    }
+  };
+
+  // PERCENTAGE Function
+  const percentage = () => {
+    if (value !== "") {
+      setValue((value / 100).toString());
+    }
   };
 
   // ADDITION Function
-  const addition = () => {
-    setFirstArg(parseInt(value));
+  const addition = (e) => {
+    setOperationButton(e.target);
+    if (value.includes(".")) {
+      setContainsDecimal(true);
+    }
+    e.target.classList.toggle("operations-button-selected");
+    e.target.disabled = true;
+    setFirstArg(parseFloat(value));
     setValue("");
     setOperation("addition");
   };
 
-  // EQUALS function
-  const equals = () => {
-    setTotal((value ? parseInt(value) : 0) + firstArg);
-    setValue(total);
+  // SUBTRACTION Function
+  const subtraction = (e) => {
+    setOperationButton(e.target);
+    if (value.includes(".")) {
+      setContainsDecimal(true);
+    }
+    e.target.classList.toggle("operations-button-selected");
+    e.target.disabled = true;
+    setFirstArg(parseFloat(value));
+    setValue("");
+    setOperation("subtraction");
   };
 
-  // console.log(value);
-  // console.log(typeof value);
-  // console.log(firstArg);
-  // console.log(typeof firstArg);
-  // console.log(secondArg);
-  // console.log(typeof secondArg);
+  // MULTIPLICATION Function
+  const multiplication = (e) => {
+    setOperationButton(e.target);
+    if (value.includes(".")) {
+      setContainsDecimal(true);
+    }
+    e.target.classList.toggle("operations-button-selected");
+    e.target.disabled = true;
+    setFirstArg(parseFloat(value));
+    setValue("");
+    setOperation("multiplication");
+  };
+
+  // DIVISION Function
+  const division = (e) => {
+    setOperationButton(e.target);
+    if (value.includes(".")) {
+      setContainsDecimal(true);
+    }
+    e.target.classList.toggle("operations-button-selected");
+    e.target.disabled = true;
+    setFirstArg(parseFloat(value));
+    setValue("");
+    setOperation("division");
+  };
+
+  // EQUALS function
+  const equals = () => {
+    // Changing operations color back to normal
+    operationButton.classList.remove("operations-button-selected");
+    operationButton.disabled = false;
+    // Calculations based of Type of Operation
+    if (operation === "addition") {
+      setSecondArg(value ? parseFloat(value) : 0);
+      setTotal(firstArg + (value ? parseFloat(value) : 0));
+      let total = firstArg + (value ? parseFloat(value) : 0);
+      containsDecimal ? setValue(total.toFixed(2).toString()) : setValue(total.toString());
+    }
+    if (operation === "subtraction") {
+      setSecondArg(value ? parseFloat(value) : 0);
+      setTotal(firstArg - (value ? parseFloat(value) : 0));
+      let total = firstArg - (value ? parseFloat(value) : 0);
+      containsDecimal ? setValue(total.toFixed(2).toString()) : setValue(total.toString());
+    }
+    if (operation === "multiplication") {
+      setSecondArg(value ? parseFloat(value) : 0);
+      setTotal(firstArg * (value ? parseFloat(value) : 0));
+      let total = firstArg * (value ? parseFloat(value) : 0);
+      containsDecimal ? setValue(total.toFixed(2).toString()) : setValue(total.toString());
+    }
+    if (operation === "division") {
+      setSecondArg(value ? parseFloat(value) : 0);
+      setTotal(firstArg / (value ? parseFloat(value) : 0));
+      let total = firstArg / (value ? parseFloat(value) : 0);
+      containsDecimal ? setValue(total.toFixed(2).toString()) : setValue(total.toString());
+    }
+  };
 
   console.log(total);
-  // console.log(firstArg + operation + secondArg);
-  // console.log(parseInt(firstArg + operation + secondArg));
 
   ///////////////////////////////////////////////////////////////////////
   return (
@@ -54,24 +143,41 @@ const Calculator = () => {
       <div className="calculator-container">
         <h1 className="text-box">{value}</h1>
         <div className="calcButtonsContainer">
-          <button onClick={clearFunction} className="top-buttons">
-            AC
+          {cButton ? (
+            <button onClick={clearFunction} className="top-buttons">
+              C
+            </button>
+          ) : (
+            <button onClick={clearFunction} className="top-buttons">
+              AC
+            </button>
+          )}
+
+          <button onClick={plusMinus} className="top-buttons">
+            +/-
           </button>
-          <button className="top-buttons">+/-</button>
-          <button className="top-buttons">%</button>
-          <button className="operations-button">÷</button>
+          <button onClick={percentage} className="top-buttons">
+            %
+          </button>
+          <button onClick={(e) => division(e)} className="operations-button">
+            ÷
+          </button>
           <button onClick={(e) => addToFunction(e)}>7</button>
           <button onClick={(e) => addToFunction(e)}>8</button>
           <button onClick={(e) => addToFunction(e)}>9</button>
-          <button className="operations-button">x</button>
+          <button onClick={(e) => multiplication(e)} className="operations-button">
+            x
+          </button>
           <button onClick={(e) => addToFunction(e)}>4</button>
           <button onClick={(e) => addToFunction(e)}>5</button>
           <button onClick={(e) => addToFunction(e)}>6</button>
-          <button className="operations-button">-</button>
+          <button onClick={(e) => subtraction(e)} className="operations-button">
+            -
+          </button>
           <button onClick={(e) => addToFunction(e)}>1</button>
           <button onClick={(e) => addToFunction(e)}>2</button>
           <button onClick={(e) => addToFunction(e)}>3</button>
-          <button onClick={addition} className="operations-button">
+          <button onClick={(e) => addition(e)} className="operations-button">
             +
           </button>
           <button onClick={(e) => addToFunction(e)} className="button-0">
