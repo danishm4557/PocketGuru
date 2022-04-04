@@ -7,7 +7,9 @@ const NavBar = () => {
       <>
         <Navbar className="meee-auto" bg="primary" variant="dark">
           <Container className="cont">
-            <Navbar.Brand href="#home">Pocket Guru</Navbar.Brand>
+            <Link to="/">
+              <Navbar.Brand>Pocket Guru</Navbar.Brand>
+            </Link>
             <Nav className="me-auto">
               <Nav.Link as={Link} to="/">
                 Home

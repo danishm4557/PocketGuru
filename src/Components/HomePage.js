@@ -35,18 +35,22 @@ const HomePage = () => {
           />
         </div>
         <div className="card">
-          <img
-            className="app-image"
-            src="https://i.pinimg.com/originals/03/fd/28/03fd284948387458641483ef58822e3c.png"
-            alt="img"
-          />
+          <Link to="/clock/stopwatch">
+            <img
+              className="app-image"
+              src="https://i.pinimg.com/originals/03/fd/28/03fd284948387458641483ef58822e3c.png"
+              alt="img"
+            />
+          </Link>
         </div>
         <div className="card">
-          <img
-            className="app-image"
-            src="https://cdn.vox-cdn.com/thumbor/pOMbzDvdEWS8NIeUuhxp23wi_cU=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/19700731/googlemaps.png"
-            alt="img"
-          />
+          <Link to="/map">
+            <img
+              className="app-image"
+              src="https://cdn.vox-cdn.com/thumbor/pOMbzDvdEWS8NIeUuhxp23wi_cU=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/19700731/googlemaps.png"
+              alt="img"
+            />
+          </Link>
         </div>
         <div className="card">
           <img

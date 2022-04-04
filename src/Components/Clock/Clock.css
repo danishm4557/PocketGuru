@@ -1,0 +1,208 @@
+.clock-container {
+  display: flex;
+  background-color: black;
+  width: 25vw;
+  height: 70vh;
+  margin: 0 auto;
+  margin-top: 10vh;
+  border: 0.4vw solid gray;
+  border-radius: 2vw;
+  /* background-color: red; */
+  flex-wrap: wrap;
+  box-shadow: 15px 20px 20px gray !important;
+}
+
+.clock-text-box {
+  width: 17vw;
+  height: 23vh;
+  /* text-align: center !important; */
+  padding-top: 8vh;
+  /* padding-left: 0vw;
+  padding-right: 8vw; */
+  color: white;
+  margin-top: 1vh;
+  margin-left: 4vw;
+  font-size: 6vh;
+  overflow: hidden;
+  /* background-color: green; */
+  font-size: 4vw;
+  border-radius: 2vw;
+}
+
+.clockScreenContainer {
+  /* background-color: yellow; */
+  /* position: relative; */
+  width: 100vw;
+  height: 10vh;
+  margin-bottom: 35vh;
+  display: flex;
+  justify-content: space-around !important;
+}
+
+.clock-text-box::-webkit-scrollbar {
+  display: none;
+}
+
+.bottom-tab {
+  display: flex;
+  height: 7vh;
+  position: absolute;
+  width: 24.5vw !important;
+  margin-top: 63vh !important;
+  justify-content: space-evenly;
+}
+
+.bottom-tab button {
+  border-radius: 10vw;
+  width: 10vw;
+  height: 5vh;
+  font-size: 2.3vh;
+}
+
+.clockScreenContainer button {
+  width: 5vw;
+  height: 8vh;
+  border-radius: 50%;
+  margin: auto;
+  font-size: 2vh;
+}
+.laps-info-section {
+  /* background-color: gray; */
+  position: absolute;
+  margin-top: 34.8vh;
+  margin-left: 0.2vw;
+  height: 26vh;
+  overflow-y: scroll;
+}
+.laps-info-section::-webkit-scrollbar {
+  display: none;
+}
+
+.laps-and-time-container {
+  /* background-color: blue; */
+  width: 24vw;
+  /* height: 7vh; */
+  /* margin-left: 0.4vw; */
+}
+
+.laps-and-time-info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: -3vh;
+}
+
+.laps-and-time-info p {
+  font-size: 2.2vh;
+  color: white;
+}
+
+.hr {
+  color: white;
+  margin: 1vw 1vw 0.45vw 1vw;
+}
+
+.lapAndResetButton {
+  font-size: 1.4vw !important;
+}
+
+.startButton {
+  background-color: rgb(41, 110, 57);
+  color: rgb(37, 230, 84);
+  font-size: 1.4vw !important;
+}
+.stopButton {
+  background-color: rgb(87, 28, 28);
+  color: rgb(255, 0, 0);
+  font-size: 1.4vw !important;
+}
+
+.mode-selected {
+  color: rgb(255, 196, 0);
+}
+
+.timer-text-box {
+  width: 25vw;
+  height: 23vh;
+  text-align: center !important;
+  padding-top: 8vh;
+  /* padding-left: 0vw;
+  padding-right: 8vw; */
+  color: white;
+  margin-top: 1vh;
+  /* margin-left: 2vw; */
+  font-size: 6vh;
+  overflow: hidden;
+  border-radius: 2vw;
+}
+
+.hours-dropdown,
+.minutes-dropdown,
+.seconds-dropdown {
+  width: 5vw !important;
+  max-height: 10vh !important;
+  overflow-y: hidden;
+  text-align: center;
+  color: white;
+  background-color: black;
+  font-size: 2vw;
+}
+
+select,
+option {
+  /* width: 8vw !important; */
+  overflow: scroll !important;
+}
+
+option::-webkit-scrollbar {
+  display: none;
+}
+
+select::-webkit-scrollbar {
+  display: none;
+}
+
+.pauseButton {
+  background-color: rgb(146, 76, 18);
+  color: rgb(255, 196, 0);
+}
+
+.timer-ends-section {
+  /* background-color: gray; */
+  position: absolute;
+  margin-top: 35.9vh;
+  margin-left: 4.5vw;
+  height: 4.3vh;
+  text-align: center;
+  padding: 0 0.5vw 0 0.5vw;
+  border: 0.03vw solid gray;
+}
+
+.timer-ends-section h2 {
+  font-size: 1.8vw;
+  text-align: center;
+  color: white;
+}
+.timer-ends-section select {
+  /* position: absolute;
+  margin-top: -4.7vh !important; */
+  /* margin-left: 1.1vw; */
+  font-size: 1.8vw;
+  background-color: black;
+  color: white;
+}
+
+.count-down-timer-div {
+  border: 0.3vw solid rgb(255, 196, 0);
+  width: 13.5vw;
+  height: 13vw;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  margin-top: -4.4vw;
+  margin-left: 5vw;
+}
+
+.count-down-timer-div h2 {
+  margin: auto;
+  font-size: 3vw;
+}
