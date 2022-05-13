@@ -6,7 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Calculator from "./Components/Calculator/Calculator";
 import Stopwatch from "./Components/Clock/Stopwatch";
 import Timer from "./Components/Clock/Timer";
-import MapC from "./Components/Map/Map";
+import Map from "./Components/Map/Map";
+import News from "./Components/News/News";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
           <Route path="/calculator" element={<Calculator />} />
           <Route path="/clock/Stopwatch" element={<Stopwatch />} />
           <Route path="/clock/Timer" element={<Timer />} />
-          <Route path="/map" element={<MapC />} />
+          <Route path="/map" element={<Map />} />
+          <Route path="/news" element={<News />} />
         </Routes>
       </Router>
     </div>

@@ -8,7 +8,7 @@ import addControl from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.j
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_KEY;
 
-const MapC = () => {
+const Map = () => {
   const mapContainer = useRef(null);
   const map = useRef(null);
   const directions = useRef(null);
@@ -62,4 +62,4 @@ const MapC = () => {
   );
 };
 
-export default MapC;
+export default Map;

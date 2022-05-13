@@ -53,11 +53,13 @@ const HomePage = () => {
           </Link>
         </div>
         <div className="card">
-          <img
-            className="app-image"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVRKg_7yaQi8HTk9SJim4p23oefZYPBSZGLg&usqp=CAU"
-            alt="img"
-          />
+          <Link to="/news">
+            <img
+              className="app-image"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVRKg_7yaQi8HTk9SJim4p23oefZYPBSZGLg&usqp=CAU"
+              alt="img"
+            />
+          </Link>
         </div>
         <div className="card">
           <img
