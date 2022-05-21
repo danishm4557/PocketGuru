@@ -8,6 +8,7 @@ import Stopwatch from "./Components/Clock/Stopwatch";
 import Timer from "./Components/Clock/Timer";
 import Map from "./Components/Map/Map";
 import News from "./Components/News/News";
+import Weather from "./Components/Weather/Weather";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/clock/Timer" element={<Timer />} />
           <Route path="/map" element={<Map />} />
           <Route path="/news" element={<News />} />
+          <Route path="/weather" element={<Weather />} />
         </Routes>
       </Router>
     </div>

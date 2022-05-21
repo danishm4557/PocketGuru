@@ -1,0 +1,70 @@
+.zipcode-form-container {
+  /* background-color: gray; */
+  /* height: 6vh; */
+}
+
+.zipcode-input {
+  display: flex;
+  justify-content: center;
+  padding-top: 3vh;
+}
+
+.bg-dark {
+  width: 65vw;
+  height: 50vh;
+  /* margin-left: 20vw !important; */
+}
+
+.card-img {
+  width: 65vw;
+  height: 50vh;
+  filter: blur(9px);
+}
+
+.current-report-container {
+  background-color: black;
+  width: 65vw;
+  margin-top: 10vh;
+  margin-left: 17vw;
+  display: block !important;
+  overflow: scroll;
+}
+
+.current-report-container::-webkit-scrollbar {
+  display: none;
+}
+
+.city-info {
+  height: 7vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 45% !important;
+
+  padding: 1vw;
+}
+
+.current-weather-details-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.three-day-report {
+  display: block;
+}
+
+.three-day-details {
+  display: flex !important;
+  justify-content: space-between;
+  /* line-height: vh; */
+  /* background-color: red; */
+  align-items: flex-start;
+}
+
+.hourly-report {
+  display: block !important;
+  overflow-x: scroll;
+}
+
+.hourly-report-day {
+  display: flex !important;
+  /* overflow-x: scroll; */
+}

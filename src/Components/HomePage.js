@@ -62,11 +62,13 @@ const HomePage = () => {
           </Link>
         </div>
         <div className="card">
-          <img
-            className="app-image"
-            src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png"
-            alt="img"
-          />
+          <Link to="/weather">
+            <img
+              className="app-image"
+              src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png"
+              alt="img"
+            />
+          </Link>
         </div>
       </div>
     </>

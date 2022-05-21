@@ -62,6 +62,7 @@ const News = () => {
     setSelectedArticle(topNews);
     setShowingFullArticle(true);
   };
+  //   console.log(data);
 
   if (!showingFullArticle) {
     return (
@@ -225,7 +226,7 @@ const News = () => {
               <p>{selectedArticle[0] ? selectedArticle[0].summary : selectedArticle.summary}</p>
             </article>
           </div>
-          <div className="stocks-news-container">
+          <div className="market-news-container">
             <h2 style={{ marginLeft: "2vw" }}>Market News</h2>
             {marketNews && (
               <ul>
