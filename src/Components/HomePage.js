@@ -14,18 +14,22 @@ const HomePage = () => {
           </Link>
         </div>
         <div className="card">
-          <img
-            className="app-image"
-            src="https://icons.veryicon.com/png/Application/openPhone/Notes.png"
-            alt="img"
-          />
+          <Link to="/notes">
+            <img
+              className="app-image"
+              src="https://icons.veryicon.com/png/Application/openPhone/Notes.png"
+              alt="img"
+            />
+          </Link>
         </div>
         <div className="card">
-          <img
-            className="app-image"
-            src="https://iconarchive.com/download/i81256/hamzasaleem/stock-apps-style-2-part-2/Reminders.ico"
-            alt="img"
-          />
+          <Link to="/reminders">
+            <img
+              className="app-image"
+              src="https://iconarchive.com/download/i81256/hamzasaleem/stock-apps-style-2-part-2/Reminders.ico"
+              alt="img"
+            />
+          </Link>
         </div>
         <div className="card">
           <img

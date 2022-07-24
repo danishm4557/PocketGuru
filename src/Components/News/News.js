@@ -33,6 +33,7 @@ const News = () => {
         );
         setTopNews(uniqueArticles[0]);
         setData(uniqueArticles.slice(1));
+        console.log(data);
       })
       .catch((err) => {
         console.log(err.message);
