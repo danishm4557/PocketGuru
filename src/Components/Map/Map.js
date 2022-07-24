@@ -1,65 +1,55 @@
 import React, { useRef, useEffect, useState } from "react";
-import "./Map.css";
-import mapboxgl, { NavigationControl } from "mapbox-gl";
-import "mapbox-gl/dist/mapbox-gl.css";
-import MapboxDirections from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.js";
-import "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css";
-import addControl from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.js";
+import { GoogleMap, useJsApiLoader, InfoWindow, Marker } from '@react-google-maps/api';
 
-mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_KEY;
+const containerStyle = {
+  width: '1440px',
+  height: '760px'
+};
+const center = {
+  lat: 41.8781,
+  lng: -87.6298
+};
 
 const Map = () => {
-  const mapContainer = useRef(null);
-  const map = useRef(null);
-  const directions = useRef(null);
-  const [lng, setLng] = useState(-87.6298);
-  const [lat, setLat] = useState(41.8781);
-  const [zoom, setZoom] = useState(9);
-  const marker = useRef(null);
+  
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY
+  })
 
-  // const MapboxDirections = require("@mapbox/mapbox-gl-directions");
+  const [map, setMap] = React.useState(null)
 
-  useEffect(() => {
-    if (map.current) return; // initialize map only once
-    map.current = new mapboxgl.Map({
-      container: mapContainer.current,
-      style: "mapbox://styles/mapbox/streets-v11",
-      center: [lng, lat],
-      zoom: zoom,
-    });
+  const onLoad = React.useCallback(function callback(map) {
+    const bounds = new window.google.maps.LatLngBounds(center);
+    map.fitBounds(bounds);
+    setMap(map)
+  }, [])
 
-    directions.current = new MapboxDirections({
-      accessToken: mapboxgl.accessToken,
-      unit: "metric",
-      profile: "mapbox/driving",
-      alternatives: false,
-      geometries: "geojson",
-      controls: { instructions: false },
-      flyTo: false,
-    });
-  });
+  const onUnmount = React.useCallback(function callback(map) {
+    setMap(null)
+  }, [])
 
-  // map.addControl(
-  //   new MapboxDirections({
-  //     accessToken: mapboxgl.accessToken,
-  //   }),
-  //   "top-left"
-  // );
+  return isLoaded ? (
+      <GoogleMap
+        mapContainerStyle={containerStyle}
+        center={center}
+        zoom={3}
+        onLoad={onLoad}
+        onUnmount={onUnmount}
+      >
+      {/* THIS MARKER WORKS >>>
+      <Marker
+        key={23}
+        position={ center }
+        icon={{
+          url: "https://thumbs.dreamstime.com/b/red-maps-pin-location-map-icon-location-pin-pin-icon-vector-red-maps-pin-location-map-icon-location-pin-pin-icon-vector-vector-140200096.jpg",
+          scaledSize: new window.google.maps.Size(50, 50),
+        }}
+      /> */}
 
-  useEffect(() => {
-    if (!map.current) return; // wait for map to initialize
-    map.current.on("move", () => {
-      setLng(map.current.getCenter().lng.toFixed(4));
-      setLat(map.current.getCenter().lat.toFixed(4));
-      setZoom(map.current.getZoom().toFixed(2));
-    });
-  });
-
-  return (
-    <>
-      <div ref={mapContainer} className="map-container" />
-    </>
-  );
+        <></>
+      </GoogleMap>
+  ) : <></>
 };
 
 export default Map;
