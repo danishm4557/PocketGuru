@@ -19,7 +19,7 @@ const Weather = () => {
     // console.log(e.target.zipcodeInput.value);
     // setZipcode(e.target.zipcodeInput.value);
     // zipcode = e.target.zipcodeInput.value;
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${zipcode}&aqi=no&days=10`)
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${zipcode}&aqi=no&days=10`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Error: No Good");
