@@ -14,7 +14,7 @@ const News = () => {
 
   useEffect(() => {
     fetch(
-      `https://api.newscatcherapi.com/v2/latest_headlines?countries=US&topic=${category}&page_size=15`,
+      `http://api.newscatcherapi.com/v2/latest_headlines?countries=US&topic=${category}&page_size=15`,
       {
         headers: {
           "x-api-key": process.env.REACT_APP_NEWS_API_KEY,
@@ -39,7 +39,7 @@ const News = () => {
         console.log(err.message);
       });
 
-    fetch(`https://finnhub.io/api/v1/news?category=general&token=${market_news_key}`)
+    fetch(`http://finnhub.io/api/v1/news?category=general&token=${market_news_key}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Error fetching market news: " + response.status);

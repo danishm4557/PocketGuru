@@ -40,6 +40,7 @@ button {
 .text-box {
   position: absolute;
   margin-left: 0.5vw;
+  width: 23vw !important;
   /* background-color: yellow; */
   width: 24vw;
   text-align: right;
