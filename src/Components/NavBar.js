@@ -5,36 +5,36 @@ const NavBar = () => {
   return (
     <div>
       <>
-        <Navbar className="meee-auto" bg="primary" variant="dark">
+        <Navbar bg="primary" variant="dark">
           <Container className="cont">
             <Link to="/">
               <Navbar.Brand>Pocket Guru</Navbar.Brand>
             </Link>
             <Nav className="me-auto">
-              <Nav.Link as={Link} to="/">
-                Home
-              </Nav.Link>
-              <Nav.Link as={Link} to="/Notes">
-                Quick Notes
-              </Nav.Link>
-              <Nav.Link as={Link} to="/calculator">
-                Calculator
-              </Nav.Link>
-              {/* <NavDropdown title="User" id="collasible-nav-dropdown">
-                <NavDropdown.Item className="navDropDownItem" href="#action/3.1">
-                  Your Profile
-                </NavDropdown.Item>
-                <NavDropdown.Item className="navDropDownItem" href="#action/3.2">
-                  Help
-                </NavDropdown.Item>
-                <NavDropdown.Item className="navDropDownItem" href="#action/3.3">
-                  Settings
-                </NavDropdown.Item>
-                <NavDropdown.Divider className="navDropDownItem" />
-                <NavDropdown.Item className="navDropDownItem" href="#action/3.4">
-                  Sign Out
-                </NavDropdown.Item>
-              </NavDropdown> */}
+                <Nav.Link as={Link} to="/">
+                  <span className="d-inline-block d-sm-none">
+                    🏠
+                  </span>
+                  <span className="d-none d-sm-inline-block">
+                    Home
+                  </span>
+                </Nav.Link>
+                <Nav.Link as={Link} to="/Notes">
+                  <span className="d-inline-block d-sm-none">
+                    📕
+                  </span>
+                  <span className="d-none d-sm-inline-block">
+                    Notes
+                  </span>
+                </Nav.Link>
+                <Nav.Link as={Link} to="/calculator">
+                  <span className="d-inline-block d-sm-none">
+                    🧮
+                  </span>
+                  <span className="d-none d-sm-inline-block">
+                    Calculator
+                  </span>
+                </Nav.Link>
             </Nav>
           </Container>
         </Navbar>
