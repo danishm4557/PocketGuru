@@ -22,7 +22,7 @@ const HomePage = () => {
             />
           </Link>
         </div>
-        <div className="card">
+        {/* <div className="card">
           <Link to="/reminders">
             <img
               className="app-image"
@@ -37,7 +37,7 @@ const HomePage = () => {
             src="https://i.pinimg.com/originals/de/e7/22/dee722e5e0bdd6950d754f74a8a49065.png"
             alt="img"
           />
-        </div>
+        </div> */}
         <div className="card">
           <Link to="/clock/stopwatch">
             <img

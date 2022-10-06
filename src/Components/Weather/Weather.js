@@ -1,13 +1,12 @@
 import React, { useState, useRef } from "react";
-import { Nav, Item, Card, Button, Link } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import "./Weather.css";
 
 const Weather = () => {
   const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
   const [zipcode, setZipcode] = useState(null);
   const [currentReport, setCurrentReport] = useState(null);
-  const [tenDayReport, setTenDayReport] = useState(null);
-  const [mode, setMode] = useState("today");
+  const [mode] = useState("today");
 
   const changeZipcodeValue = (e) => {
     setZipcode(e.target.value);

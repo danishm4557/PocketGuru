@@ -9,6 +9,7 @@ import Timer from "./Components/Clock/Timer";
 import Map from "./Components/Map/Map";
 import News from "./Components/News/News";
 import Weather from "./Components/Weather/Weather";
+import Notes from "./Components/Notes/Notes"
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/map" element={<Map />} />
           <Route path="/news" element={<News />} />
           <Route path="/weather" element={<Weather />} />
+          <Route path="/notes" element={<Notes />} />
         </Routes>
       </Router>
     </div>

@@ -14,11 +14,13 @@ const NavBar = () => {
               <Nav.Link as={Link} to="/">
                 Home
               </Nav.Link>
-              <Nav.Link href="#features">Quick Notes</Nav.Link>
+              <Nav.Link as={Link} to="/Notes">
+                Quick Notes
+              </Nav.Link>
               <Nav.Link as={Link} to="/calculator">
                 Calculator
               </Nav.Link>
-              <NavDropdown title="User" id="collasible-nav-dropdown">
+              {/* <NavDropdown title="User" id="collasible-nav-dropdown">
                 <NavDropdown.Item className="navDropDownItem" href="#action/3.1">
                   Your Profile
                 </NavDropdown.Item>
@@ -32,7 +34,7 @@ const NavBar = () => {
                 <NavDropdown.Item className="navDropDownItem" href="#action/3.4">
                   Sign Out
                 </NavDropdown.Item>
-              </NavDropdown>
+              </NavDropdown> */}
             </Nav>
           </Container>
         </Navbar>
