@@ -4,11 +4,6 @@
   border: none;
 }
 
-.button-0 {
-  width: 10vw !important;
-  border-radius: 35% !important;
-}
-
 button {
   background-color: rgb(70, 78, 93);
   color: white;
@@ -18,14 +13,14 @@ button {
   display: flex;
   background-color: black;
   border: 0.4vw solid gray;
-  width: 25vw;
+  /* width: 25vw; */
   margin: 0 auto;
   margin-top: 13vh;
   border-radius: 2vw;
   box-shadow: 15px 20px 20px gray !important;
 }
 .calcButtonsContainer {
-  width: 25vw;
+  /* width: 25vw; */
   height: 50vh;
   display: flex !important;
   flex-direction: row !important;
@@ -69,4 +64,108 @@ button {
 .operations-button-selected {
   background-color: white;
   color: rgb(241, 163, 60);
+}
+
+/* NEW STYLING */
+.top-buttons-1 {
+  background-color: rgb(223, 223, 223);
+  color: rgb(70, 78, 93);
+}
+
+.operations-buttons-1 {
+  background-color: rgb(241, 163, 60);
+  color: white;
+}
+
+button {
+  border-radius: 50%;
+}
+
+.calculator-container-1 {
+  display: flex;
+  background-color: black;
+  border: 0.4vw solid gray;
+  height: 72vh;
+  margin: 0 auto;
+  /* margin-top: 13vh; */
+  border-radius: 2vw;
+  box-shadow: 15px 20px 20px gray !important;
+}
+
+.calcButtonsContainer-1 {
+  height: 70vh;
+}
+
+
+.text-box-1 {
+  /* margin-left: 0.5vw; */
+  text-align: right;
+  align-items: center !important;
+  /* border: 2px solid black; */
+  color: white;
+  font-size: 6vh;
+  overflow-x: scroll;
+}
+
+@media (min-width: 800px) {
+  .calculator-container-1 {
+    display: flex;
+    background-color: black;
+    border: 0.4vw solid gray;
+    height: 90vh;
+    margin: 0 auto;
+    margin-top: 2vh;
+    border-radius: 2vw;
+    box-shadow: 15px 20px 20px gray !important;
+  }
+  .calcButtonsContainer-1 {
+    height:87vh;
+  }
+  h1 {
+    height: 10%;
+    max-width: 30vw !important;
+    overflow-x: scroll !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .calculator-container-1 {
+    display: flex;
+    background-color: black;
+    border: 0.4vw solid gray;
+    height: 90vh;
+    margin: 0 auto;
+    margin-top: 2vh;
+    border-radius: 2vw;
+    box-shadow: 15px 20px 20px gray !important;
+  }
+  .calcButtonsContainer-1 {
+    height:87vh;
+  }
+  h1 {
+    height: 10%;
+    max-width: 40vw !important;
+    overflow-x: scroll !important;
+  }
+}
+@media (max-width: 574px) {
+  h1 {
+    height: 10%;
+    max-width: 77vw !important;
+    overflow-x: scroll !important;
+  }
+}
+@media (min-width: 575px) and (max-width: 767px) {
+  h1 {
+    height: 10%;
+    max-width: 46vw !important;
+    overflow-x: scroll !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  h1 {
+    height: 10%;
+    max-width: 38vw !important;
+    overflow-x: scroll !important;
+  }
 }

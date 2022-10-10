@@ -1,4 +1,6 @@
 import "./Calculator.css";
+import "../../App.css";
+
 import { useState } from "react";
 
 const Calculator = () => {
@@ -140,7 +142,7 @@ const Calculator = () => {
   ///////////////////////////////////////////////////////////////////////
   return (
     <>
-      <div className="calculator-container">
+      {/* <div className="calculator-container">
         <h1 className="text-box">{value}</h1>
         <div className="calcButtonsContainer">
           {cButton ? (
@@ -187,6 +189,52 @@ const Calculator = () => {
           <button onClick={equals} className="operations-button">
             =
           </button>
+        </div>
+      </div> */}
+      <div className="col-10 col-sm-6 col-md-5 col-lg-4 px-2 mx-auto calculator-container-1">
+        <div className="">
+          <div className="row calcButtonsContainer-1 w-100 mx-auto">
+          {/* TEXT SCREEN */}
+            <h1 className="text-box-1 mb-0 pt-3">{value}</h1>
+          {/* FIRST ROW */}
+          {cButton ? (
+              <button onClick={clearFunction} className="col-3 top-buttons-1">
+                C
+              </button>
+            ) : (
+              <button onClick={clearFunction} className="col-3 top-buttons-1">
+                AC
+              </button>
+            )}
+            <button onClick={plusMinus} className="col-3 top-buttons-1">
+              +/-
+            </button>
+            <button onClick={percentage} className="col-3 top-buttons-1">
+              %
+            </button>
+            <button onClick={(e) => division(e)} className="col-3 top-buttons-1">
+              ÷
+            </button>
+          {/* SECOND ROW */}
+            <button onClick={(e) => addToFunction(e)} className="col-3">7</button>
+            <button onClick={(e) => addToFunction(e)} className="col-3">8</button>
+            <button onClick={(e) => addToFunction(e)} className="col-3">9</button>
+            <button onClick={(e) => multiplication(e)} className="col-3 operations-buttons-1">x</button>
+          {/* THIRD ROW */}
+            <button onClick={(e) => addToFunction(e)} className="col-3">4</button>
+            <button onClick={(e) => addToFunction(e)} className="col-3">5</button>
+            <button onClick={(e) => addToFunction(e)} className="col-3">6</button>
+            <button onClick={(e) => subtraction(e)} className="col-3 operations-buttons-1">-</button>
+          {/* FOURTH ROW */}
+            <button onClick={(e) => addToFunction(e)} className="col-3">1</button>
+            <button onClick={(e) => addToFunction(e)} className="col-3">2</button>
+            <button onClick={(e) => addToFunction(e)} className="col-3">3</button>
+            <button onClick={(e) => addition(e)} className="col-3 operations-buttons-1">+</button>
+          {/* FIFTH ROW */}
+            <button onClick={(e) => addToFunction(e)} className="col-6 rounded">0</button>
+            <button onClick={(e) => addToFunction(e)} className="col-3">.</button>
+            <button onClick={equals} className="col-3 operations-buttons-1">=</button>
+          </div> 
         </div>
       </div>
     </>

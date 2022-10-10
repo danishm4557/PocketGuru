@@ -22,22 +22,6 @@ const HomePage = () => {
             />
           </Link>
         </div>
-        {/* <div className="card">
-          <Link to="/reminders">
-            <img
-              className="app-image"
-              src="https://iconarchive.com/download/i81256/hamzasaleem/stock-apps-style-2-part-2/Reminders.ico"
-              alt="img"
-            />
-          </Link>
-        </div>
-        <div className="card">
-          <img
-            className="app-image"
-            src="https://i.pinimg.com/originals/de/e7/22/dee722e5e0bdd6950d754f74a8a49065.png"
-            alt="img"
-          />
-        </div> */}
         <div className="card col-4 col-sm-3">
           <Link to="/clock/stopwatch" className="mx-auto">
             <img
