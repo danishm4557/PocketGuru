@@ -77,7 +77,7 @@ button {
   color: white;
 }
 
-button {
+.calcButtonsContainer-1 > button {
   border-radius: 50%;
 }
 
@@ -121,7 +121,7 @@ button {
   .calcButtonsContainer-1 {
     height:87vh;
   }
-  h1 {
+  .calcButtonsContainer-1 > h1 {
     height: 10%;
     max-width: 30vw !important;
     overflow-x: scroll !important;
@@ -142,28 +142,28 @@ button {
   .calcButtonsContainer-1 {
     height:87vh;
   }
-  h1 {
+  .calcButtonsContainer-1 > h1 {
     height: 10%;
     max-width: 40vw !important;
     overflow-x: scroll !important;
   }
 }
 @media (max-width: 574px) {
-  h1 {
+  .calcButtonsContainer-1 > h1 {
     height: 10%;
     max-width: 77vw !important;
     overflow-x: scroll !important;
   }
 }
 @media (min-width: 575px) and (max-width: 767px) {
-  h1 {
+  .calcButtonsContainer-1 > h1 {
     height: 10%;
     max-width: 46vw !important;
     overflow-x: scroll !important;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  h1 {
+  .calcButtonsContainer-1 > h1 {
     height: 10%;
     max-width: 38vw !important;
     overflow-x: scroll !important;

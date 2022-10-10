@@ -139,10 +139,10 @@ const Notes = () => {
 					<div className="col-10 mx-auto py-2">
 						<h1 className="px-4">Notes</h1>
 					</div>
-					<div className="col-10 rounded mx-auto anyClass">
+					<div className="col-10 rounded mx-auto anyClass overflow-auto h-568px">
 						{titlesList.map((title) => (
 							<div className="col-12 bg-secondary text-light border-top border-bottom overflow-hidden mx-auto py-2 px-4" key={title._id} onClick={(title) => viewExistingNote(title)}>
-								{title.note}
+								{title.note.slice(0,100)}...
 							</div>
 						))
 						}
