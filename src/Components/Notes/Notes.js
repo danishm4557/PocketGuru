@@ -18,7 +18,7 @@ const Notes = () => {
 
 	//// Fetching list of all existing notes for Notes Home Page ////
 	useEffect(() => {
-		fetch(localURL + '/note')
+		fetch(localURL + 'note')
 		.then((response) => {
 			if (!response.ok) {
 			  throw new Error(`This is an HTTP error: The status is ${response.status}`)
@@ -82,7 +82,7 @@ const Notes = () => {
 	const postNewNote = (e) => {
 		e.preventDefault();
 		// FETCH TO THE BACKEND
-		fetch(localURL + '/note', {
+		fetch(localURL + 'note', {
 			method: 'POST',
 			body: JSON.stringify({
 				note: newNote,
@@ -110,7 +110,7 @@ const Notes = () => {
 	/////////////// Editing Note in the Database /////////////////
 	const updateNote = (note) => {
 		note.preventDefault()
-		fetch(localURL + '/note/' + existingNoteID, {
+		fetch(localURL + 'note/' + existingNoteID, {
 		  method: 'PUT',
 		  body: JSON.stringify({note: note.target[0].value}),
 		  headers: {
