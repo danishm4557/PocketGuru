@@ -193,9 +193,9 @@ const Calculator = () => {
       </div> */}
       <div className="col-10 col-sm-6 col-md-5 col-lg-4 px-2 mx-auto calculator-container-1">
         <div className="">
-          <div className="row calcButtonsContainer-1 w-100 mx-auto">
+          <div className="row calcButtonsContainer-1 w-100 mx-auto overflow-hidden">
           {/* TEXT SCREEN */}
-            <h1 className="text-box-1 mb-0 pt-3">{value}</h1>
+            <h1 className="text-box-1 mb-0 pt-3 overflow-hidden">{value}</h1>
           {/* FIRST ROW */}
           {cButton ? (
               <button onClick={clearFunction} className="col-3 top-buttons-1">

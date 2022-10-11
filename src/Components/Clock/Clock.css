@@ -98,26 +98,56 @@
 
 .hr {
   color: white;
-  margin: 1vw 1vw 0.45vw 1vw;
+  margin: 1vw 0vw 0.45vw 0vw;
 }
 
 .lapAndResetButton {
-  font-size: 1.4vw !important;
+  /* font-size: 1.4vw !important; */
+  width: 60px !important;
+  height: 80px !important;
+  border-radius: 50% !important;
 }
 
 .startButton {
   background-color: rgb(41, 110, 57);
   color: rgb(37, 230, 84);
-  font-size: 1.4vw !important;
+  /* font-size: 1.4vw !important; */
+  height: 30px !important;
+  border-radius: 50% !important;
+  width: 60px !important;
+  height: 80px !important;
 }
 .stopButton {
   background-color: rgb(87, 28, 28);
   color: rgb(255, 0, 0);
-  font-size: 1.4vw !important;
+  /* font-size: 1.4vw !important; */
+  height: 30px !important;
+  border-radius: 50% !important;
+  width: 60px !important;
+  height: 80px !important;
+}
+
+.pauseButton {
+  background-color: rgb(87, 28, 28);
+  /* color: rgb(255, 0, 0); */
+  /* font-size: 1.4vw !important; */
+  height: 30px !important;
+  border-radius: 50% !important;
+  width: 60px !important;
+  height: 80px !important;
 }
 
 .mode-selected {
   color: rgb(255, 196, 0);
+  border-radius: 35% !important;
+  width: 120px !important;
+  height: 45px !important;
+}
+
+.timer-button {
+  border-radius: 35% !important;
+  width: 120px !important;
+  height: 45px !important;
 }
 
 .timer-text-box {
@@ -138,13 +168,14 @@
 .hours-dropdown,
 .minutes-dropdown,
 .seconds-dropdown {
-  width: 5vw !important;
-  max-height: 10vh !important;
+  width: 20vw !important;
+  height: 10vh !important;
   overflow-y: hidden;
   text-align: center;
   color: white;
   background-color: black;
-  font-size: 2vw;
+  font-size: 8vw;
+  margin-top: 10vh !important;
 }
 
 select,
@@ -191,18 +222,55 @@ select::-webkit-scrollbar {
   color: white;
 }
 
+.timer-input-section {
+  height: 200px !important
+}
+
+.start-cancel-buttons {
+  margin-top: 13vh !important;
+}
+
 .count-down-timer-div {
   border: 0.3vw solid rgb(255, 196, 0);
-  width: 13.5vw;
-  height: 13vw;
+  width: 170px !important;
+  height: 170px !important;
   border-radius: 50%;
   display: flex;
   align-items: center;
-  margin-top: -4.4vw;
-  margin-left: 5vw;
+  margin-top: 13vh !important;
+}
+
+.count-down-timer-div > h2 {
+  font-size: 25px !important;
 }
 
 .count-down-timer-div h2 {
   margin: auto;
   font-size: 3vw;
+}
+
+.h-385px {
+  height: 385px !important;
+}
+
+.h-80px {
+  height: 80px !important;
+  font-size: 6vh !important;
+  color: white !important;
+}
+
+.h-100px {
+  height: 100px !important;
+}
+
+.h-18px {
+  height: 18px !important;
+}
+
+.colon {
+  width: 10px !important;
+  height: 170px !important;
+  display: flex;
+  align-items: center;
+  margin-top: 13vh !important;
 }
