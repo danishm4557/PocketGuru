@@ -169,7 +169,7 @@ const News = () => {
             </div>
           </Nav.Link>
         )}
-        <div className="news-cards-container">
+        <div className="news-cards-container d-flex col-12 ">
           {data &&
             data.map((news) => (
               <div
@@ -178,7 +178,7 @@ const News = () => {
                 key={news._id}
               >
                 <Nav.Link className="article-link">
-                  <Card style={{ width: "14rem" }} bg="light" key={news._id}>
+                  <Card style={{ width: "14rem" }} bg="light" key={news._id} className="mx-2">
                     <Card.Img
                       variant="top"
                       src={news.media}

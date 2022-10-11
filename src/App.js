@@ -10,10 +10,19 @@ import Map from "./Components/Map/Map";
 import News from "./Components/News/News";
 import Weather from "./Components/Weather/Weather";
 import Notes from "./Components/Notes/Notes"
+import MetaTags from "react-meta-tags";
 
 function App() {
   return (
     <div>
+      <MetaTags>
+        <title> PocketGuru - The Guru Which Does it All </title>
+        <meta name="description" content="Your PocketGuru with all the tools you will need today." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og-title" content="PocketGuru - The Guru Which Does it All" />
+        <meta property="og-description" content="Your PocketGuru with all the tools you will need today." />
+        <meta property="og-image" content="./img/pocketGuru-homepage-screenshot.png" />
+      </MetaTags>
       <Router>
         <NavBar />
         <Routes>

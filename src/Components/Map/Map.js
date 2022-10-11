@@ -1,9 +1,11 @@
 import React, { useRef, useEffect, useState } from "react";
 import { GoogleMap, useJsApiLoader, InfoWindow, Marker } from '@react-google-maps/api';
+import "../../App.css"
+import "./Map.css"
 
 const containerStyle = {
-  width: '1440px',
-  height: '760px'
+  width: '100%',
+  height: '750px'
 };
 const center = {
   lat: 41.8781,
@@ -33,7 +35,7 @@ const Map = () => {
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={3}
+        zoom={7}
         onLoad={onLoad}
         onUnmount={onUnmount}
       >
