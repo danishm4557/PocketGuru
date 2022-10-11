@@ -18,7 +18,7 @@ const Notes = () => {
 
 	//// Fetching list of all existing notes for Notes Home Page ////
 	useEffect(() => {
-		fetch(localURL + 'note')
+		fetch(localURL + 'note', { mode: 'no-cors'})
 		.then((response) => {
 			if (!response.ok) {
 			  throw new Error(`This is an HTTP error: The status is ${response.status}`)
@@ -83,6 +83,7 @@ const Notes = () => {
 		e.preventDefault();
 		// FETCH TO THE BACKEND
 		fetch(localURL + 'note', {
+			mode: 'no-cors',
 			method: 'POST',
 			body: JSON.stringify({
 				note: newNote,
@@ -111,6 +112,7 @@ const Notes = () => {
 	const updateNote = (note) => {
 		note.preventDefault()
 		fetch(localURL + 'note/' + existingNoteID, {
+		  mode: 'no-cors',
 		  method: 'PUT',
 		  body: JSON.stringify({note: note.target[0].value}),
 		  headers: {
