@@ -44,7 +44,7 @@ const Notes = () => {
 	const viewExistingNote = (singleNote) => {
 		singleNote.preventDefault()
 		// console.log(singleNote)
-		setExistingNote(singleNote.target.innerText.substring(0, singleNote.target.innerText.length() - 2))
+		setExistingNote(singleNote.target.innerText)
 		setExistingNoteView(true)
 		// console.log(Object.values(singleNote.target)[0].key)
 		setExistingNoteID(Object.values(singleNote.target)[0].key)
@@ -187,7 +187,7 @@ const Notes = () => {
 				<div className="col-10 rounded mx-auto anyClass bg-secondary px-4">
 					<form className="row" onSubmit={(e) => updateNote(e)}>
 						<div className="col-11 border-none text-light text-center my-2">{today}</div>
-						<input type='textarea' id='newNote' name='newNote' className="h-500px col-12 bg-secondary text-light border-0" onChange={(event) => existingNoteHandleChange(event)} value={existingNote} />
+						<input type='textarea' id='newNote' name='newNote' className="h-500px col-12 bg-secondary text-light border-0" onChange={(event) => existingNoteHandleChange(event)} value={existingNote.substring(0, existingNote.length() - 2)} />
 						<button className="col-2 bg-danger text-light border border-light py-3" onClick={() => setExistingNoteView(false)}>X</button>
 						<input type="submit" value="Finish Editing" className="col-10 bg-primary text-light border border-light py-3" />
 					</form>
