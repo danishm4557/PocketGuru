@@ -44,7 +44,7 @@ const Notes = () => {
 	const viewExistingNote = (singleNote) => {
 		singleNote.preventDefault()
 		// console.log(singleNote)
-		setExistingNote(singleNote.target.innerText.substring(0, singleNote.target.innerText - 2))
+		setExistingNote(singleNote.target.innerText.substring(0, singleNote.target.innerText.length() - 2))
 		setExistingNoteView(true)
 		// console.log(Object.values(singleNote.target)[0].key)
 		setExistingNoteID(Object.values(singleNote.target)[0].key)
