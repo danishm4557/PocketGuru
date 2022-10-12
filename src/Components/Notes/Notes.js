@@ -92,10 +92,10 @@ const Notes = () => {
 				'Content-Type': 'application/json'
 			}
 		}).then( res => {
+			setViewChange(viewChange + 1)
 			return res.json()
 		}).then(
 			setNewNoteView(false),
-			setViewChange(viewChange + 1)
 		).catch (error => console.log(error))
 		console.log(titlesList[titlesList.length-1])
 		setExistingNoteView(false)
@@ -111,7 +111,6 @@ const Notes = () => {
 	const updateNote = (note) => {
 		note.preventDefault()
 		fetch(localURL + 'note/' + existingNoteID, {
-		  mode: 'no-cors',
 		  method: 'PUT',
 		  body: JSON.stringify({note: note.target[0].value}),
 		  headers: {
