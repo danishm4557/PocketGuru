@@ -97,10 +97,11 @@ const Notes = () => {
 		}).then(
 			setNewNoteView(false),
 			setViewChange(viewChange + 1)
-		).catch (error => console.log(error))
-		console.log(titlesList[titlesList.length-1])
-		setExistingNoteView(false)
+		).then(
+		console.log(titlesList[titlesList.length-1]),
+		setExistingNoteView(false),
 		setNewNote(false)
+		)
 	}
 	//////////////////////////////////////////////////////////////
 
