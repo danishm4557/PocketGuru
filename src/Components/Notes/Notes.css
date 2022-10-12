@@ -1,9 +1,9 @@
 .anyClass {
-/* height:600px; */
+height:600px;
 overflow-y: scroll !important;
 }
 
-/* .h-500px {
+.h-500px {
 	height: 500px;
 }
 .h-568px {
@@ -11,7 +11,7 @@ overflow-y: scroll !important;
 }
 .h-600px {
 	height: 600px;
-} */
+}
 
 @media (min-width: 0px) and (max-width: 600px) {
 	.h-568px {

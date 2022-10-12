@@ -170,6 +170,7 @@ const Notes = () => {
 					<form className="row" onSubmit={(e) => postNewNote(e)}>
 						<div className="col-11 border-none text-light text-center my-2">{today}</div>
 						<input type='textarea' id='newNote' name='newNote' className="h-500px col-12 bg-secondary text-light border-0" onChange={(event) => newNoteHandleChange(event)} />
+						
 						<button className="col-2 bg-danger text-light border border-light py-3" onClick={() => setNewNoteView(false)}>X</button>
 						<input type="submit" value="Add New Note" className="col-10 bg-primary text-light border border-light py-3" />
 					</form>
@@ -187,7 +188,7 @@ const Notes = () => {
 				<div className="col-10 rounded mx-auto anyClass bg-secondary px-4">
 					<form className="row" onSubmit={(e) => updateNote(e)}>
 						<div className="col-11 border-none text-light text-center my-2">{today}</div>
-						<input type='textarea' id='newNote' name='newNote' className="h-500px col-12 bg-secondary text-light border-0" onChange={(event) => existingNoteHandleChange(event)} value={existingNote.substring(0, existingNote.length() - 2)} />
+						<input type='textarea' id='newNote' name='newNote' className="h-500px col-12 bg-secondary text-light border-0" onChange={(event) => existingNoteHandleChange(event)} value={existingNote} />
 						<button className="col-2 bg-danger text-light border border-light py-3" onClick={() => setExistingNoteView(false)}>X</button>
 						<input type="submit" value="Finish Editing" className="col-10 bg-primary text-light border border-light py-3" />
 					</form>
