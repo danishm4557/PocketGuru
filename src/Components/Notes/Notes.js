@@ -83,7 +83,6 @@ const Notes = () => {
 		e.preventDefault();
 		// FETCH TO THE BACKEND
 		fetch(localURL + 'note', {
-			mode: 'no-cors',
 			method: 'POST',
 			body: JSON.stringify({
 				note: newNote,
@@ -93,13 +92,14 @@ const Notes = () => {
 				'Content-Type': 'application/json'
 			}
 		}).then( res => {
+			return res.json()
+		}).then(
 			setNewNoteView(false),
 			setViewChange(viewChange + 1)
-			console.log(titlesList[titlesList.length-1]),
-			setExistingNoteView(false),
-			setNewNote(false)
-			return res.json()
-		})
+		).catch (error => console.log(error))
+		console.log(titlesList[titlesList.length-1])
+		setExistingNoteView(false)
+		setNewNote(false)
 	}
 	//////////////////////////////////////////////////////////////
 
