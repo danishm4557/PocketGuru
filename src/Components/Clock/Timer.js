@@ -182,10 +182,10 @@ const Timer = () => {
         </div>
       </div> */}
       <div className="row col-10 col-sm-7 col-md-5 col-lg-4 col-xl-3 px-2 mx-auto calculator-container-1">
-        <div className="d-flex align-self-center align-items-center justify-content-center h-80px">
+        <div className="d-flex align-self-center justify-content-center h-80px">
           {!timerStarted & !paused ? (
-            <div className="d-flex col-12 justify-content-center">
-              <select size="2" name="hours" className="hours-dropdown timer-input-section">
+            <div className="d-flex col-12 align-self-center justify-content-center">
+              <select size="2" name="hours" className="hours-dropdown timer-input-section align-self-center">
                 {hours.map((hour) => (
                   <option onClick={(e) => setHour(e)} key={hour}>
                     {hour}
@@ -193,7 +193,7 @@ const Timer = () => {
                 ))}
               </select>
               <span className="colon">:</span>
-              <select size="2" name="minutes" className="minutes-dropdown timer-input-section">
+              <select size="2" name="minutes" className="minutes-dropdown timer-input-section align-self-center">
                 {minutes.map((minute) => (
                   <option onClick={(e) => setMinute(e)} key={minute}>
                     {minute}
@@ -201,7 +201,7 @@ const Timer = () => {
                 ))}
               </select>
               <span className="colon">:</span>
-              <select size="2" name="seconds" className="seconds-dropdown timer-input-section">
+              <select size="2" name="seconds" className="seconds-dropdown timer-input-section align-self-center">
                 {seconds.map((second) => (
                   <option onClick={(e) => setSecond(e)} key={second}>
                     {second}
@@ -225,10 +225,6 @@ const Timer = () => {
             <button onClick={startTimer} className="startButton w-30 mx-3">
               Start
             </button>
-            // ) : (
-            //   <button onClick={startTimer} className="startButton">
-            //     Start
-            //   </button>
           )}
           {timerStarted && (
             <button onClick={pauseTimer} className="pauseButton w-30 mx-3">
