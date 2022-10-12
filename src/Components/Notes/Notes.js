@@ -18,7 +18,7 @@ const Notes = () => {
 
 	//// Fetching list of all existing notes for Notes Home Page ////
 	useEffect(() => {
-		fetch(localURL + 'note', { mode: 'no-cors'})
+		fetch(localURL + 'note')
 		.then((response) => {
 			if (!response.ok) {
 			  throw new Error(`This is an HTTP error: The status is ${response.status}`)
