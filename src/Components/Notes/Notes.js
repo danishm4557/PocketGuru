@@ -93,15 +93,13 @@ const Notes = () => {
 				'Content-Type': 'application/json'
 			}
 		}).then( res => {
-			return res.json()
-		}).then(
 			setNewNoteView(false),
 			setViewChange(viewChange + 1)
-		).then(
-		console.log(titlesList[titlesList.length-1]),
-		setExistingNoteView(false),
-		setNewNote(false)
-		)
+			console.log(titlesList[titlesList.length-1]),
+			setExistingNoteView(false),
+			setNewNote(false)
+			return res.json()
+		})
 	}
 	//////////////////////////////////////////////////////////////
 
