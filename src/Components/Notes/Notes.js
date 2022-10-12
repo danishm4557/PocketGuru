@@ -27,7 +27,7 @@ const Notes = () => {
 		})
 		.then((results) => {
 		setTitlesList(results)
-		console.log(results)
+		// console.log(results)
 		})
 		.catch((err) => {
 		console.log(err.message)
@@ -43,10 +43,10 @@ const Notes = () => {
 	////////////////// View Existing Note ////////////////////////
 	const viewExistingNote = (singleNote) => {
 		singleNote.preventDefault()
-		console.log(singleNote)
-		setExistingNote(singleNote.target.innerText)
+		// console.log(singleNote)
+		setExistingNote(singleNote.target.innerText.substring(0, singleNote.target.innerText - 2))
 		setExistingNoteView(true)
-		console.log(Object.values(singleNote.target)[0].key)
+		// console.log(Object.values(singleNote.target)[0].key)
 		setExistingNoteID(Object.values(singleNote.target)[0].key)
 	}
 	//////////////////////////////////////////////////////////////
@@ -58,7 +58,7 @@ const Notes = () => {
 
 	//////// Setting value of New Note as it's being typed ////////
 	const newNoteHandleChange = (event) => {
-		console.log(event.target.value)
+		// console.log(event.target.value)
 		setNewNote(event.target.value)
 	}
 	//////////////////////////////////////////////////////////////
@@ -97,7 +97,7 @@ const Notes = () => {
 		}).then(
 			setNewNoteView(false),
 		).catch (error => console.log(error))
-		console.log(titlesList[titlesList.length-1])
+		// console.log(titlesList[titlesList.length-1])
 		setExistingNoteView(false)
 		setNewNote(false)
 	}
